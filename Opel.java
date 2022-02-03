@@ -1,19 +1,18 @@
-public class Bil
+public class Opel
 {
     public String merke;
     private int modell;
-    public Integer modeller;
     public Motor motor;
 
 
-    public Bil()                         // Default byggmester Bobb
+    public Opel()                                         // Default byggmester Bobb
     {
         merke = "Opel astra";
         modell = 1993;
         motor = new Motor();
     }
 
-    public Bil(String merke, int modell, int cc, int hk) // kan han fikse?
+    public Opel(String merke, int modell, int cc, int hk) // Kan han fikse?
     {
         this.merke = merke;
         this.modell = modell;
@@ -24,6 +23,7 @@ public class Bil
     {
         return modell;
     }
+
 /*
     public void nyModell(int modell)
     {
