@@ -1,14 +1,25 @@
 public class Motor {
     public int cc;
-    public int hesteKrefter;
+    private int hesteKrefter;
 
-    public Motor(int cc, int hk){
+    public Motor(int cc, int hk)
+    {
         this.cc = cc;
         hesteKrefter = hk;
     }
-    public Motor(){
+    public Motor()
+    {
         int divisor = 3;
         cc = 1000;
         hesteKrefter = cc/divisor;
+    }
+
+    public void setNewHesteKrefter(int hesteKrefter)
+    {
+        this.hesteKrefter = hesteKrefter;
+    }
+    public int getHesteKrefter()
+    {
+        return hesteKrefter;
     }
 }
