@@ -2,23 +2,24 @@ public class Bil
 {
     public String merke;
     private int modell;
-    final Motor motor;
+    public Integer modeller;
+    public Motor motor;
 
 
-    public Bil() // byggmester Bobb
+    public Bil()                         // Default byggmester Bobb
     {
         merke = "Opel astra";
         modell = 1993;
         motor = new Motor();
-
     }
-    public Bil(String merke, int modell) // kan han fikse?
+
+    public Bil(String merke, int modell, int cc, int hk) // kan han fikse?
     {
         this.merke = merke;
         this.modell = modell;
-        motor = new Motor();
-
+        motor = new Motor(cc, hk);
     }
+
     public int getModell()
     {
         return modell;
