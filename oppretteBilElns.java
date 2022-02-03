@@ -14,25 +14,37 @@ public class oppretteBilElns {
 
 
 
-        // input bilmerke
+        // Input bilmerke
         System.out.println("Skriv inn bil-merke: ");
         String bilMerke = userInput.nextLine();
         label.setText(bilMerke);
 
-        // input årsmodell
+        // Input årsmodell
         System.out.println("Skriv inn aarsmodell: ");
         int aarsModell = userInput.nextInt();
 
-        // input CC
+        // Input CC
         System.out.println("Skriv inn cc: ");
         int cc = userInput.nextInt();
 
-        // input hestekrefter
+        // Input hestekrefter
         System.out.println("Skriv inn hestekrefter: ");
         int hk = userInput.nextInt();
 
         // Oppretter objektet Bil med
-        Bil astra = new Bil(bilMerke, aarsModell, cc, hk);
+        Opel astra = new Opel(bilMerke, aarsModell, cc, hk);
+
+
+        // Override user input
+        astra.motor.setNewHesteKrefter(91);
+
+        // System prints status
+        statusPrint(astra);
+
+
+
+        // Array stuff t neste modul
+        /*
         List<List> mixedTypes = new ArrayList<List>();
 
         ArrayList<String> listOfStrings = new ArrayList<String>(Arrays.asList(bilMerke));
@@ -42,11 +54,17 @@ public class oppretteBilElns {
         mixedTypes.add(listOfStrings);
         mixedTypes.add(listOfIntegers);
 
+        System.out.println("Miksa arraylist: "+ mixedTypes);
+        */
+    }
+
+
+    public static void statusPrint(Opel astra)
+    {
         System.out.println("Merke: " +astra.merke);
         System.out.println("Modell: " +astra.getModell());
         System.out.println("CC: " +astra.motor.cc);
-        System.out.println("Hestekrefter: " + astra.motor.hesteKrefter);
-        System.out.println("Miksa arraylist: "+ mixedTypes);
+        System.out.println("Hestekrefter: " + astra.motor.getHesteKrefter());
     }
 
 }
