@@ -10,6 +10,7 @@ public class Opel
         merke = "Opel astra";
         modell = 1993;
         motor = new Motor();
+        int modellKopi = modell;
     }
 
     public Opel(String merke, int modell, int cc, int hk) // Kan han fikse?

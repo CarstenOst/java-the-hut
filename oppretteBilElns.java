@@ -1,11 +1,18 @@
-import javax.swing.JLabel;
+import javax.swing.*;
+import java.awt.*;
 import java.util.*;
 
 public class oppretteBilElns {
     public static void main(String[] args) {
+        // Setter inn bilde og resizer til ønsket størrelse
+        ImageIcon imageIcon = new ImageIcon("OpelAstra1993.jpg");
+        Image image = imageIcon.getImage();
+        Image newimg = image.getScaledInstance(220, 220, Image.SCALE_SMOOTH);
+        imageIcon = new ImageIcon(newimg);
 
         JLabel label = new JLabel();
         label.setText("Opel Astra");
+        label.setIcon(imageIcon);
         label.setHorizontalAlignment(JLabel.CENTER);
 
         MyFrame myFrame = new MyFrame();
@@ -39,7 +46,7 @@ public class oppretteBilElns {
         astra.motor.setNewHesteKrefter(91);
 
         // System prints status
-        statusPrint(astra);
+        callStatusPrint(astra);
 
 
 
@@ -56,6 +63,9 @@ public class oppretteBilElns {
 
         System.out.println("Miksa arraylist: "+ mixedTypes);
         */
+    }
+    public static void callStatusPrint(Opel astra){
+        statusPrint(astra);
     }
 
 
